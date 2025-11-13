@@ -56,16 +56,18 @@ Après l’entraînement, le modèle est sauvegardé dans le dossier models, il 
 
 Le test vérifie que :
 
-le modèle est chargeable,
+* le modèle est chargeable,
 
-il prédit correctement plusieurs exemples simples,
+* il prédit correctement plusieurs exemples simples,
 
-aucune erreur de pipeline ne survient.
+* aucune erreur de pipeline ne survient.
+
 
 5. **Dépendances Python**  
-  ```bash
+   ```bash
    pip3 install -r requirements.txt
 
+Le test vérifie que :
 * pandas
 
 * scikit-learn
@@ -74,5 +76,5 @@ aucune erreur de pipeline ne survient.
 
 * pytest
 
-5. **Notes**  
+6. **Notes**   
 Les scripts sont conçus pour être exécutés localement, dans un environnement Python 3.13+ avec les dépendances listées.
