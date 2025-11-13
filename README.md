@@ -67,7 +67,7 @@ Le test vérifie que :
    ```bash
    pip3 install -r requirements.txt
 
-Le test vérifie que :
+Librairies
 * pandas
 
 * scikit-learn
