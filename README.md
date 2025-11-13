@@ -12,13 +12,6 @@ L'objectif est de créer un pipeline simple permettant de :
 
 ---
 
-## Description du dépôt
-
-Ce dépôt contient uniquement le code et les scripts nécessaires à l'entraînement et à la validation du modèle.  
-Les données sensibles ou volumineuses (`generated_payloads.csv`, `train.csv`, `test.csv`, `combined.csv`) ainsi que le modèle entraîné (`models/`) **ne sont pas inclus** et doivent être générés localement.
-
----
-
 ## Workflow du projet
 
 1. **Préparer le dataset**   
@@ -30,23 +23,24 @@ Les données sensibles ou volumineuses (`generated_payloads.csv`, `train.csv`, `
 
 Le script :
 
-supprime les doublons et les lignes vides,
+* supprime les doublons et les lignes vides,
 
-nettoie les textes (espaces, retours à la ligne, tabulations),
+* nettoie les textes (espaces, retours à la ligne, tabulations),
 
-normalise les labels,
+* normalise les labels,
 
-génère :
+et il génère :
 
-data/combined.csv : dataset complet nettoyé,
+* data/combined.csv : dataset complet nettoyé,
 
-data/train.csv : données d'entraînement (80%),
+* data/train.csv : données d'entraînement (80%),
 
-data/test.csv : données de test (20%).
+* data/test.csv : données de test (20%).
 
 3. **Entraînement du modèle**  
    ```bash
    python scripts/train_model.py
+
 
 Le modèle utilise un pipeline ML :
 
@@ -56,8 +50,8 @@ Logistic Regression (LogisticRegression) : classifieur supervisé qui apprend à
 
 Après l’entraînement, le modèle est sauvegardé dans le dossier models, il peut ensuite être utilisé pour prédire la classe d’une nouvelle requête.
 
-4. **Entraînement du modèle**  
-  ```bash
+4. **Tests automatiques**  
+   ```bash
    pytest -v -s tests/test_pipeline.py
 
 Le test vérifie que :
