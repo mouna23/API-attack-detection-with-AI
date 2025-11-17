@@ -1,4 +1,4 @@
-# Détection SQL/XSS sur API Web avec machine learning
+# Détection des attaques SQL/XSS sur API Web avec intelligence artificielle / machine learning
 
 Ce projet vise à détecter les injections SQL et XSS dans des requêtes/params d'API en utilisant du machine learning.
 

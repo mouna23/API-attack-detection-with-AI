@@ -3,3 +3,8 @@ Il contient les colonnes suivantes :
 
 - `text` : la requête API (paramètres inclus)  
 - `label` : `sql_injection`, `xss` ou `benign`
+
+Après exécution de `scripts/clean_and_split.py`, les fichiers suivants seront créés localement :
+- `data/combined.csv`
+- `data/train.csv`
+- `data/test.csv`

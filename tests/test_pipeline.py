@@ -19,6 +19,7 @@ def test_model_load_and_predict():
     # Quelques exemples simples
     examples = [
         ("/api/v1/user?id=1", "benign"),
+        ("/customvoice/endpoints?api-version=2024-02-01-preview", "benign"),
         ("SELECT * FROM users WHERE id=1", "sql_injection"),
         ("/search?q=<script>alert('XSS')</script>", "xss")
     ]
